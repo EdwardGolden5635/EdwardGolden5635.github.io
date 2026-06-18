@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--
+    Author: Edward Golden
+    Date: 06/18/2026
+    Purpose: This page serves as a personal portfolio homepage.
+    It includes navigation, project links, and interactive JavaScript
+    to welcome the user by name.
+    -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Homepage</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            margin: 0;
+        }
+        nav {
+            background-color: #333;
+            padding: 10px;
+        }
+        nav a {
+            color: white;
+            margin-right: 15px;
+            text-decoration: none;
+        }
+        section {
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- Welcome message -->
+<h1 id="welcomeMsg"></h1>
+
+<!-- Navigation -->
+<nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<!-- About Section -->
+<section id="about">
+    <h2>About Me</h2>
+    <p>
+        Hello! My name is Edward Golden. I am family man who loves to cook and partake in multiple other hobbies. I am a student learning web development,
+        focusing on HTML, CSS, and JavaScript. I am learning to build interactive
+        websites and improving my coding skills through hands-on projects. 
+    </p>
+</section>
+
+<!-- Projects Section -->
+<section id="projects">
+    <h2>Projects</h2>
+
+    <!-- Replace # with real GitHub links later -->
+    <a href="#">
+        <img src="https://via.placeholder.com/150" alt="Project 1">
+    </a>
+
+    <a href="#">
+        <img src="https://via.placeholder.com/150" alt="Project 2">
+    </a>
+
+    <a href="#">
+        <img src="https://via.placeholder.com/150" alt="Project 3">
+    </a>
+
+</section>
+
+<!-- Contact Section -->
+<section id="contact">
+    <h2>Contact</h2>
+
+    <form>
+        <label>Name:</label><br>
+        <input type="text" required><br><br>
+
+        <label>Email:</label><br>
+        <input type="email" required><br><br>
+
+        <label>Subject:</label><br>
+        <input type="text"><br><br>
+
+        <label>Message:</label><br>
+        <textarea rows="5" cols="30"></textarea><br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+
+</section>
+
+<!-- JavaScript -->
+<script>
+    // Prompt user for their name
+    var userName = prompt("Enter your name:");
+
+    // Display welcome message
+    if (userName) {
+        document.getElementById("welcomeMsg").innerText =
+            "Welcome to my portfolio, " + userName + "!";
+    } else {
+        document.getElementById("welcomeMsg").innerText =
+            "Welcome to my portfolio!";
+    }
+</script>
+
+</body>
+</html>
